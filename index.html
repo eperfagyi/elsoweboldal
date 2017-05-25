@@ -112,7 +112,7 @@ sizes="48x48">
     </iframe>
 </center>
 <br>
-<input type=text id=user>
+<input onkeydown="if(event.keyCode==13){login()}" type=text id=user>
 <button onclick=login()>
     Belépés
 </button>
