@@ -1,0 +1,131 @@
+<title>
+    szuper
+</title>
+<link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJgLchVT3zFVQNGIH5Ps49EcCEsFes49N3rVj43pa3wvpkgQhr"
+type="image/x-icon" <link rel="icon" href="https://yt3.ggpht.com/-Sq4eLpBnZec/AAAAAAAAAAI/AAAAAAAAAAA/NBbPfThUUvg/s100-c-k-no-mo-rj-c0xffffff/photo.jpg"
+sizes="48x48">
+<center>
+    <span id="ln">
+        Név: nincs bejelentkezve
+    </span>
+    <h1>
+        hello! a dohányzás tilos!
+    </h1>
+    <p class=lol>
+        Üdvözöllek a hiper-szuper weboldalamon!
+    </p>
+    <style>
+        .lol { font-size: 18px; }
+    </style>
+    <img src="https://yt3.ggpht.com/-Sq4eLpBnZec/AAAAAAAAAAI/AAAAAAAAAAA/NBbPfThUUvg/s100-c-k-no-mo-rj-c0xffffff/photo.jpg">
+    </img>
+    <br>
+    <a style=text-decoration:none href="https://github.com/processhacker2/processhacker2/releases/download/v2.39/processhacker-2.39-setup.exe">
+    <button>letöltés</button>
+    </a>
+    <button id=jatek>
+        játék!
+    </button>
+    <button id=jatek2>
+        másik játék!
+    </button>
+    <label>
+        <input type=checkbox id=selfgame>
+        Önjáték
+    </label>
+    <script>
+        var GAME_MIN = 1;
+        var GAME_MAX = 100;
+        document.getElementById("jatek").onclick = function() {
+            var num = Math.floor(Math.random() * GAME_MAX) + GAME_MIN;
+            console.log("szám: " + num);
+            while (1) {
+                var un = prompt("mi a tipp? (1-100)");
+                if (un == null) break;
+                else if (un < 1 || un > 100) alert("idióta!");
+                else if (num > un) alert("nagyobbra gondoltam");
+                else if (num < un) alert("kisebbre gondoltam");
+                else if (num == un) {
+                    alert("nyertél!");
+                    break;
+                } else alert("WTF???");
+            }
+        }
+
+        document.getElementById("jatek2").onclick = function() {
+            var num = 50;
+            var min = GAME_MIN;
+            var max = GAME_MAX;
+            var virt = (document.getElementById("selfgame").checked ? new VirtualGame() : undefined);
+            while (1) {
+                if (min > max || max < min) {
+                    alert("WTF???");
+                    break;
+                }
+                var num = Math.floor((min + max) / 2);
+                var chk = prompt(num + "? (k/n/e)", virt ? virt.check(num) : virt);
+                if (chk == "k" || chk == "<") max = num - 1;
+                else if (chk == "n" || chk == ">") min = num + 1;
+                else if (chk == null || chk == "e" || chk == "=" || chk == "p") break;
+                // num = Math.max(Math.min(num, max), min);
+
+            }
+        }
+
+        function VirtualGame() {
+            this.num = Math.floor(Math.random() * GAME_MAX) + GAME_MIN;
+            this.check = function(un) {
+                return (un == this.num ? "=" : un < this.num ? ">" : un > this.num ? "<" : "");
+            }
+        }
+    </script>
+    <a style=text-decoration:none href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJgLchVT3zFVQNGIH5Ps49EcCEsFes49N3rVj43pa3wvpkgQhr">
+    <button>kép nézés</button>
+    </a>
+    <a style=text-decoration:none href="http://download1503.mediafire.com/jzjf73wqpjzg/nc2deuuobealr4a/Minecraft.exe">
+    <button>letöltés2</button>
+    </a>
+    <a style=text-decoration:none href="http://dekorwebshop.hu/files_/dekorwebshop/tabla_matrica/dohanyzasos/tilos_a_dohanyzas_matrica_tabla_resize_336x232_wmcenter_center.png">
+    <button>dohányzás</button>
+    </a>
+    <br>
+    <a style="text-decoration:none" href="https://www.youtube.com/channel/UCyl1WBFBBuT0boXd-oLpfGQ">
+    <button>youtube csatorna</button>
+    </a>
+</center>
+<br>
+<br>
+<center>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/BWD9MtKLtfk"
+    frameborder="0" allowfullscreen>
+    </iframe>
+</center>
+</a>
+</center>
+<br>
+<br>
+<br>
+<center>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/1c1cxChmHkY"
+    frameborder="0" allowfullscreen>
+    </iframe>
+</center>
+<br>
+<input type=text id=user>
+<button onclick=login()>
+    Belépés
+</button>
+<script>
+    function login() {
+        localStorage.setItem("n", document.getElementById("user").value);
+        xlxl();
+    }
+
+    function xlxl() {
+        document.getElementById("ln").textContent = "Név: " + (localStorage.getItem("n") || "nincs bejelentkezve");
+    }
+    xlxl();
+</script>
+<script>
+
+</script>
