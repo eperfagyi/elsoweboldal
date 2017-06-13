@@ -1,2 +1,2 @@
 # elsoweboldal 
-ha van hiba szóljj
+ha van hiba szólj
